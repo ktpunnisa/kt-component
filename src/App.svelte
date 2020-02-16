@@ -1,5 +1,5 @@
 <script type="text/javascript">
-  export let name;
+  export let name = "ktpunnisa";
   import "./components/Button/Button.svelte";
   import "./components/Link/Link.svelte";
 </script>
@@ -20,7 +20,7 @@
   }
 </style>
 
-<svelte:options tag="svelte-app" />
+<svelte:options tag="kt-app" />
 
 <h1>{name}</h1>
 <my-link name="svelte" url="https://svelte.dev/" />
