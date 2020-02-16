@@ -1,10 +1,12 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
+  "main": "public/build/bundle.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "postinstall": "postinstall-build"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
@@ -19,6 +21,7 @@
     "svelte-preprocess": "^3.4.0"
   },
   "dependencies": {
+    "postinstall-build": "^5.0.3",
     "sirv-cli": "^0.4.4"
   }
 }
