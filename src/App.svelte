@@ -1,30 +1,30 @@
-<script>
-	export let name;
+<script type="text/javascript">
+  export let name;
+  import "./components/Button/Button.svelte";
+  import "./components/Link/Link.svelte";
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<style type="text/scss" lang="scss">
+  @import "./styles/theme.scss";
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  h1 {
+    color: $main-color;
+  }
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  div {
+    background: green;
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+    > p {
+      color: #fff;
+    }
+  }
 </style>
+
+<svelte:options tag="svelte-app" />
+
+<h1>{name}</h1>
+<my-link name="svelte" url="https://svelte.dev/" />
+<div>
+  <p>SASS is working!</p>
+</div>
+<my-button {name} bgcolor="blue" fontcolor="white" />
