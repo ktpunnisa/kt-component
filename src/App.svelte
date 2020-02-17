@@ -20,11 +20,8 @@
   }
 </style>
 
-<svelte:options tag="kt-app" />
+<svelte:options tag="kt-component" />
 
-<h1>{name}</h1>
-<my-link name="svelte" url="https://svelte.dev/" />
-<div>
-  <p>SASS is working!</p>
-</div>
+<h1>kt-component</h1>
+<my-link {name} url="https://www.facebook.com/ktpunnisa" />
 <my-button {name} bgcolor="blue" fontcolor="white" />
