@@ -24,4 +24,5 @@
 
 <h1>kt-component</h1>
 <my-link {name} url="https://www.facebook.com/ktpunnisa" />
-<my-button {name} bgcolor="blue" fontcolor="white" />
+<my-button {name} bgcolor="red" fontcolor="white" padding="12" />
+<my-button />
