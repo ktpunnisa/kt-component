@@ -1,5 +1,4 @@
 <script>
-  export let name = "ktpunnisa";
   export let fontcolor = "blue";
   export let url = "https://www.facebook.com/ktpunnisa";
 </script>
@@ -12,4 +11,6 @@
 
 <svelte:options tag="my-link" />
 
-<a href={url} style="--fontColor: {fontcolor}">{name}</a>
+<a href={url} style="--fontColor: {fontcolor}">
+  <slot />
+</a>
