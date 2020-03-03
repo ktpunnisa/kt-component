@@ -1,6 +1,6 @@
 <script type="text/javascript">
   export let name = "ktpunnisa";
-  import "./components/Button/Button.svelte";
+  import "./components/Button/button.svelte";
   import "./components/Link/Link.svelte";
   import "./components/Palette/palette.svelte";
 </script>
@@ -27,6 +27,24 @@
 <my-button ghost="true">{name}</my-button> -->
 <!-- <my-button>read more</my-button> -->
 
+<h2>Color</h2>
+<div class="palette">
+  <kt-palette color="primary" />
+  <kt-palette color="secondary" />
+  <kt-palette color="success" />
+  <kt-palette color="info" />
+  <kt-palette color="warning" />
+  <kt-palette color="danger" />
+</div>
+
+<div class="palette">
+  <kt-palette color="white" />
+  <kt-palette color="gray" />
+  <kt-palette color="black" />
+  <kt-palette color="custom" colorcode="red" shade="dark" opacity="30%" />
+</div>
+
+<h2>Color shade</h2>
 <div class="palette">
   <kt-palette color="primaryLightest" />
   <kt-palette color="primaryLighter" />
@@ -82,30 +100,26 @@
 </div>
 
 <div class="palette">
-
   <kt-palette color="grayLightest" />
   <kt-palette color="grayLighter" />
   <kt-palette color="grayLight" />
   <kt-palette color="gray" />
   <kt-palette color="grayDark" />
   <kt-palette color="grayDarker" />
-
 </div>
 
-<h2>Color</h2>
-<div class="palette">
-  <kt-palette color="primary" />
-  <kt-palette color="secondary" />
-  <kt-palette color="success" />
-  <kt-palette color="info" />
-  <kt-palette color="warning" />
-  <kt-palette color="danger" />
-</div>
-
-<div class="palette">
-  <kt-palette color="white" />
-  <kt-palette color="gray" />
-  <kt-palette color="black" />
-</div>
-
-<kt-palette color="custom" colorcode="red" shade="dark" opacity="30%" />
+<h2>button shape</h2>
+<kt-button>default button</kt-button>
+<kt-button size="small">small button</kt-button>
+<kt-button size="medium">medium button</kt-button>
+<kt-button size="large">large button</kt-button>
+<kt-button
+  type="custom"
+  fontsize="20"
+  radius="20"
+  pt="16"
+  pr="28"
+  pb="16"
+  pl="28">
+  custom button
+</kt-button>

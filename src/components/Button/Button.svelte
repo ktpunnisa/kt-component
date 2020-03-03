@@ -1,67 +1,100 @@
 <script>
-  // export let name = "ktpunnisa";
   // export let bgcolor = "pink";
   // export let fontcolor = "black";
-  // export let padding = "4";
-  export let big = false;
-  export let ghost = false;
-  export let type = "filled";
-  export let color = "success";
+  // export let big = false;
+  // export let ghost = false;
+  // export let color = "success";
+  // export let fontcolor = "white";
+  import cssVars from "../../svelte-css-vars.js";
   export let size = "medium";
-  export let fontcolor = "white";
+  export let type = "default";
+
+  export let radius = "12";
+  export let fontsize = "16";
+  export let pt = "12";
+  export let pr = "20";
+  export let pb = "12";
+  export let pl = "20";
+  $: styleVars = {
+    radius: `${radius}px`,
+    fontsize: `${fontsize}px`,
+    pt: `${pt}px`,
+    pr: `${pr}px`,
+    pb: `${pb}px`,
+    pl: `${pl}px`
+  };
 </script>
 
 <style type="text/scss" lang="scss">
   @import "../../styles/theme.scss";
+  @import "../../styles/function.scss";
   @use "sass:meta";
 
-  button {
-    padding: 0.5rem;
-    background: map-get($colors, primary);
-    color: var(--fontcolor);
-    .primary {
-      color: map-get($colors, primary);
-    }
-    .success {
-      color: map-get($colors, success);
-    }
-    .error {
-      color: map-get($colors, error);
-    }
+  @mixin button-shape($radius) {
+    border-radius: $radius;
   }
 
-  // .primary {
-  //   background: $color-primary
-  //   border-color: $color-primary;
-  //   color: #fff;
-  // }
-  // .primary:active {
-  //   background: dodgerblue;
-  // }
-  // .success {
-  //   background: $color-success;
-  //   border-color: $color-success;
-  //   color: #fff;
-  // }
-  // .success:active {
-  //   background: lime;
-  // }
+  @mixin button-size($fontsize, $pt, $pr, $pb, $pl) {
+    font-size: $fontsize;
+    padding-top: $pt;
+    padding-right: $pr;
+    padding-bottom: $pb;
+    padding-left: $pl;
+  }
+
+  button {
+    @include button-shape(map-deep-get($button, "border-radius"));
+  }
+
+  .small {
+    @include button-size(
+      map-deep-get($button, "size", "small", "font-size"),
+      map-deep-get($button, "size", "small", "padding", "top"),
+      map-deep-get($button, "size", "small", "padding", "right"),
+      map-deep-get($button, "size", "small", "padding", "bottom"),
+      map-deep-get($button, "size", "small", "padding", "left")
+    );
+  }
+
+  .medium {
+    @include button-size(
+      map-deep-get($button, "size", "medium", "font-size"),
+      map-deep-get($button, "size", "medium", "padding", "top"),
+      map-deep-get($button, "size", "medium", "padding", "right"),
+      map-deep-get($button, "size", "medium", "padding", "bottom"),
+      map-deep-get($button, "size", "medium", "padding", "left")
+    );
+  }
+
+  .large {
+    @include button-size(
+      map-deep-get($button, "size", "large", "font-size"),
+      map-deep-get($button, "size", "large", "padding", "top"),
+      map-deep-get($button, "size", "large", "padding", "right"),
+      map-deep-get($button, "size", "large", "padding", "bottom"),
+      map-deep-get($button, "size", "large", "padding", "left")
+    );
+  }
+
+  .custom {
+    @include button-shape(var(--radius));
+    @include button-size(
+      var(--fontsize),
+      var(--pt),
+      var(--pr),
+      var(--pb),
+      var(--pl)
+    );
+  }
 </style>
 
-<svelte:options tag="my-button" />
+<svelte:options tag="kt-button" />
 
-<!-- <button
-  style="--bgColor: {bgcolor}; --fontColor: {fontcolor}; --padding: {padding}px">
-  {name}
-</button> -->
-
-<!-- <button
-  class="button"
-  class:primary={color === 'primary'}
-  class:success={color === 'success'}>
-  <slot />
-</button> -->
-
-<button style="--color: {color}; --fontcolor: {fontcolor}">
+<button
+  use:cssVars={styleVars}
+  class:small={size === 'small'}
+  class:medium={size === 'medium'}
+  class:large={size === 'large'}
+  class:custom={type === 'custom'}>
   <slot />
 </button>

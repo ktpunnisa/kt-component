@@ -17,3 +17,47 @@ $shades: (
   "dark": 30%,
   "darker": 50%
 );
+
+$button: (
+  "border-radius": 4px,
+  "size": (
+    "small": (
+      "font-size": 14px,
+      "padding": (
+        "top": 8px,
+        "right": 12px,
+        "bottom": 8px,
+        "left": 12px
+      )
+    ),
+    "medium": (
+      "font-size": 16px,
+      "padding": (
+        "top": 12px,
+        "right": 20px,
+        "bottom": 12px,
+        "left": 20px
+      )
+    ),
+    "large": (
+      "font-size": 18px,
+      "padding": (
+        "top": 16px,
+        "right": 24px,
+        "bottom": 16px,
+        "left": 24px
+      )
+    )
+  ),
+  // "type": (
+  //   "default": (
+
+  //   )
+  //   "outline": (
+
+  //   )
+  //   "ghost": (
+
+  //   )
+  // )
+);

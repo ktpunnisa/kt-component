@@ -37,7 +37,7 @@
     background-color: color-shade("primary", "light");
   }
   .primary {
-    background-color: color-shade("primary", "default");
+    background-color: color-shade("primary", "base");
   }
   .primary-dark {
     background-color: color-shade("primary", "dark");
@@ -56,7 +56,7 @@
     background-color: color-shade("secondary", "light");
   }
   .secondary {
-    background-color: color-shade("secondary", "default");
+    background-color: color-shade("secondary", "base");
   }
   .secondary-dark {
     background-color: color-shade("secondary", "dark");
@@ -75,7 +75,7 @@
     background-color: color-shade("success", "light");
   }
   .success {
-    background-color: color-shade("success", "default");
+    background-color: color-shade("success", "base");
   }
   .success-dark {
     background-color: color-shade("success", "dark");
@@ -94,7 +94,7 @@
     background-color: color-shade("info", "light");
   }
   .info {
-    background-color: color-shade("info", "default");
+    background-color: color-shade("info", "base");
   }
   .info-dark {
     background-color: color-shade("info", "dark");
@@ -113,7 +113,7 @@
     background-color: color-shade("warning", "light");
   }
   .warning {
-    background-color: color-shade("warning", "default");
+    background-color: color-shade("warning", "base");
   }
   .warning-dark {
     background-color: color-shade("warning", "dark");
@@ -132,7 +132,7 @@
     background-color: color-shade("danger", "light");
   }
   .danger {
-    background-color: color-shade("danger", "default");
+    background-color: color-shade("danger", "base");
   }
   .danger-dark {
     background-color: color-shade("danger", "dark");
@@ -142,7 +142,7 @@
   }
   /* -------------------------------------------------------- */
   .white {
-    background-color: color-shade("white", "default");
+    background-color: color-shade("white", "base");
   }
   /* -------------------------------------------------------- */
   .gray-lightest {
@@ -155,7 +155,7 @@
     background-color: color-shade("gray", "light");
   }
   .gray {
-    background-color: color-shade("gray", "default");
+    background-color: color-shade("gray", "base");
   }
   .gray-dark {
     background-color: color-shade("gray", "dark");
@@ -165,7 +165,7 @@
   }
   /* -------------------------------------------------------- */
   .black {
-    background-color: color-shade("black", "default");
+    background-color: color-shade("black", "base");
   }
   /* -------------------------------------------------------- */
   .custom {
