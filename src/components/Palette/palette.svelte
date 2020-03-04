@@ -6,7 +6,7 @@
   export let color = "primary";
   export let colorcode = "#5c80ff";
   export let shade = "light";
-  export let opacity = "30%";
+  export let shadeamount = "30%";
   $: styleVars = {
     width: `${width}px`,
     height: `${height}px`,
@@ -14,7 +14,7 @@
     color,
     colorcode,
     shade,
-    opacity
+    shadeamount
   };
 </script>
 
@@ -172,7 +172,7 @@
     // background-color: custom-color-shade(
     //   var(--colorcode),
     //   var(--shade),
-    //   var(--opacity)
+    //   var(--shadeamount)
     // );
     background-color: custom-color-shade(#5c80ff, light, 30%);
   }

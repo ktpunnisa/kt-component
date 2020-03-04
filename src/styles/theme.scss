@@ -11,11 +11,11 @@ $colors: (
 );
 
 $shades: (
-  "lightest": 85%,
-  "lighter": 65%,
-  "light": 40%,
-  "dark": 30%,
-  "darker": 50%
+  "lightest": 60%,
+  "lighter": 30%,
+  "light": 10%,
+  "dark": 20%,
+  "darker": 30%
 );
 
 $button: (
@@ -49,15 +49,34 @@ $button: (
       )
     )
   ),
-  // "type": (
-  //   "default": (
-
-  //   )
-  //   "outline": (
-
-  //   )
-  //   "ghost": (
-
-  //   )
-  // )
+  "type": (
+    "default": (
+      "normal": (
+        "font-color": map-get($colors, "white"),
+        "background-color": map-get($colors, "primary"),
+        "border": none,
+        "box-shadow": 0px 4px 8px rgba(0, 0, 0, 0.1)
+      ),
+      "hover": (
+        "font-color": map-get($colors, "white"),
+        "background-color": mix(white, map-get($colors, "primary"), map-get($shades, "light")),
+        "border": none,
+        "box-shadow": 0px 4px 10px rgba(0, 0, 0, 0.25)
+      ),
+      "pressed": (
+        "font-color": map-get($colors, "white"),
+        "background-color": mix(white, map-get($colors, "primary"), map-get($shades, "lighter")),
+        "border": none,
+        "box-shadow": 0px 4px 8px rgba(0, 0, 0, 0.25)
+      ),
+      "disabled": (
+        "font-color": mix(white, map-get($colors, "gray"), map-get($shades, "light")),
+        "background-color": mix(white, map-get($colors, "gray"), map-get($shades, "lightest")),
+        "border": none,
+        "box-shadow": 0px 4px 8px rgba(0, 0, 0, 0.1)
+      )
+    ),
+    "outline": (),
+    "ghost": ()
+  )
 );

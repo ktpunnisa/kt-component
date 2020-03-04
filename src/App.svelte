@@ -1,5 +1,4 @@
 <script type="text/javascript">
-  export let name = "ktpunnisa";
   import "./components/Button/button.svelte";
   import "./components/Link/Link.svelte";
   import "./components/Palette/palette.svelte";
@@ -41,7 +40,7 @@
   <kt-palette color="white" />
   <kt-palette color="gray" />
   <kt-palette color="black" />
-  <kt-palette color="custom" colorcode="red" shade="dark" opacity="30%" />
+  <kt-palette color="custom" colorcode="red" shade="dark" shadeamount="30%" />
 </div>
 
 <h2>Color shade</h2>
@@ -110,6 +109,7 @@
 
 <h2>button shape</h2>
 <kt-button>default button</kt-button>
+<kt-button disabled="true">disabled button</kt-button>
 <kt-button size="small">small button</kt-button>
 <kt-button size="medium">medium button</kt-button>
 <kt-button size="large">large button</kt-button>
@@ -123,3 +123,5 @@
   pl="28">
   custom button
 </kt-button>
+
+<h2>----------</h2>

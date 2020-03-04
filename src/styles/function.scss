@@ -66,11 +66,11 @@
   @return map-get($colors, $color);
 }
 
-@function custom-color-shade($color, $shade, $opacity) {
+@function custom-color-shade($color, $shade, $shade-amount) {
   @if $shade == "light" {
-    @return mix(white, $color, $opacity);
+    @return mix(white, $color, $shade-amount);
   } @else if $shade == "dark" {
-    @return mix(black, $color, $opacity);
+    @return mix(black, $color, $shade-amount);
   }
   @return $color;
 }

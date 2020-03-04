@@ -8,6 +8,7 @@
   import cssVars from "../../svelte-css-vars.js";
   export let size = "medium";
   export let type = "default";
+  export let disabled = false;
 
   export let radius = "12";
   export let fontsize = "16";
@@ -42,11 +43,24 @@
     padding-left: $pl;
   }
 
+  @mixin button-state($fontcolor, $bgcolor, $border, $boxshadow) {
+    color: $fontcolor;
+    background-color: $bgcolor;
+    border: $border;
+    box-shadow: $boxshadow;
+  }
+
   button {
+    // button-shape($radius)
     @include button-shape(map-deep-get($button, "border-radius"));
   }
 
+  button:focus {
+    outline: 0;
+  }
+
   .small {
+    // button-size($fontsize, $pt, $pr, $pb, $pl)
     @include button-size(
       map-deep-get($button, "size", "small", "font-size"),
       map-deep-get($button, "size", "small", "padding", "top"),
@@ -57,6 +71,7 @@
   }
 
   .medium {
+    // button-size($fontsize, $pt, $pr, $pb, $pl)
     @include button-size(
       map-deep-get($button, "size", "medium", "font-size"),
       map-deep-get($button, "size", "medium", "padding", "top"),
@@ -67,6 +82,7 @@
   }
 
   .large {
+    // button-size($fontsize, $pt, $pr, $pb, $pl)
     @include button-size(
       map-deep-get($button, "size", "large", "font-size"),
       map-deep-get($button, "size", "large", "padding", "top"),
@@ -76,7 +92,50 @@
     );
   }
 
+  .default {
+    // button-state($fontcolor, $bgcolor, $border, $boxshadow)
+    @include button-state(
+      map-deep-get($button, "type", "default", "normal", "font-color"),
+      map-deep-get($button, "type", "default", "normal", "background-color"),
+      map-deep-get($button, "type", "default", "normal", "border"),
+      map-deep-get($button, "type", "default", "normal", "box-shadow")
+    );
+  }
+
+  .default:hover {
+    // button-state($fontcolor, $bgcolor, $border, $boxshadow)
+    @include button-state(
+      map-deep-get($button, "type", "default", "hover", "font-color"),
+      map-deep-get($button, "type", "default", "hover", "background-color"),
+      map-deep-get($button, "type", "default", "hover", "border"),
+      map-deep-get($button, "type", "default", "hover", "box-shadow")
+    );
+  }
+
+  .default:active {
+    // button-state($fontcolor, $bgcolor, $border, $boxshadow)
+    @include button-state(
+      map-deep-get($button, "type", "default", "pressed", "font-color"),
+      map-deep-get($button, "type", "default", "pressed", "background-color"),
+      map-deep-get($button, "type", "default", "pressed", "border"),
+      map-deep-get($button, "type", "default", "pressed", "box-shadow")
+    );
+  }
+
+  .default:disabled {
+    // button-state($fontcolor, $bgcolor, $border, $boxshadow)
+    @include button-state(
+      map-deep-get($button, "type", "default", "disabled", "font-color"),
+      map-deep-get($button, "type", "default", "disabled", "background-color"),
+      map-deep-get($button, "type", "default", "disabled", "border"),
+      map-deep-get($button, "type", "default", "disabled", "box-shadow")
+    );
+  }
+
   .custom {
+    // button-shape($radius)
+    // button-size($fontsize, $pt, $pr, $pb, $pl)
+    // button-state($fontcolor, $bgcolor, $border, $boxshadow)
     @include button-shape(var(--radius));
     @include button-size(
       var(--fontsize),
@@ -95,6 +154,8 @@
   class:small={size === 'small'}
   class:medium={size === 'medium'}
   class:large={size === 'large'}
-  class:custom={type === 'custom'}>
+  class:custom={type === 'custom'}
+  class:default={type === 'default'}
+  {disabled}>
   <slot />
 </button>
