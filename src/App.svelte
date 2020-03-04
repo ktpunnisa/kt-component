@@ -114,7 +114,7 @@
 <kt-button size="medium">medium button</kt-button>
 <kt-button size="large">large button</kt-button>
 <kt-button
-  type="custom"
+  size="custom"
   fontsize="20"
   radius="20"
   pt="16"

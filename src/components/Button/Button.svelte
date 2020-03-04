@@ -154,7 +154,7 @@
   class:small={size === 'small'}
   class:medium={size === 'medium'}
   class:large={size === 'large'}
-  class:custom={type === 'custom'}
+  class:custom={size === 'custom'}
   class:default={type === 'default'}
   {disabled}>
   <slot />
