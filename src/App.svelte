@@ -14,17 +14,16 @@
     display: flex;
     flex-direction: row;
   }
+
+  kt-button {
+    margin: 4px;
+  }
 </style>
 
 <svelte:options tag="kt-component" />
 
 <h1>kt-component</h1>
 <!-- <my-link url="https://www.facebook.com/ktpunnisa">{name}</my-link>s -->
-<!-- <my-button {name} bgcolor="red" fontcolor="white" padding="12" /> -->
-<!-- <my-button big="true">{name}</my-button>
-<my-button ghost>{name}</my-button>
-<my-button ghost="true">{name}</my-button> -->
-<!-- <my-button>read more</my-button> -->
 
 <h2>Color</h2>
 <div class="palette">
@@ -40,71 +39,72 @@
   <kt-palette color="white" />
   <kt-palette color="gray" />
   <kt-palette color="black" />
-  <kt-palette color="custom" colorcode="red" shade="dark" shadeamount="30%" />
+  <kt-palette color="custom" colorcode="#8528CE" shade="light" opacity="0.3" />
 </div>
 
 <h2>Color shade</h2>
+
 <div class="palette">
-  <kt-palette color="primaryLightest" />
-  <kt-palette color="primaryLighter" />
-  <kt-palette color="primaryLight" />
+  <kt-palette color="primary" shade="lightest" />
+  <kt-palette color="primary" shade="lighter" />
+  <kt-palette color="primary" shade="light" />
   <kt-palette color="primary" />
-  <kt-palette color="primaryDark" />
-  <kt-palette color="primaryDarker" />
+  <kt-palette color="primary" shade="dark" />
+  <kt-palette color="primary" shade="darker" />
 </div>
 
 <div class="palette">
-  <kt-palette color="secondaryLightest" />
-  <kt-palette color="secondaryLighter" />
-  <kt-palette color="secondaryLight" />
+  <kt-palette color="secondary" shade="lightest" />
+  <kt-palette color="secondary" shade="lighter" />
+  <kt-palette color="secondary" shade="light" />
   <kt-palette color="secondary" />
-  <kt-palette color="secondaryDark" />
-  <kt-palette color="secondaryDarker" />
+  <kt-palette color="secondary" shade="dark" />
+  <kt-palette color="secondary" shade="darker" />
 </div>
 
 <div class="palette">
-  <kt-palette color="successLightest" />
-  <kt-palette color="successLighter" />
-  <kt-palette color="successLight" />
+  <kt-palette color="success" shade="lightest" />
+  <kt-palette color="success" shade="lighter" />
+  <kt-palette color="success" shade="light" />
   <kt-palette color="success" />
-  <kt-palette color="successDark" />
-  <kt-palette color="successDarker" />
+  <kt-palette color="success" shade="dark" />
+  <kt-palette color="success" shade="darker" />
 </div>
 
 <div class="palette">
-  <kt-palette color="infoLightest" />
-  <kt-palette color="infoLighter" />
-  <kt-palette color="infoLight" />
+  <kt-palette color="info" shade="lightest" />
+  <kt-palette color="info" shade="lighter" />
+  <kt-palette color="info" shade="light" />
   <kt-palette color="info" />
-  <kt-palette color="infoDark" />
-  <kt-palette color="infoDarker" />
+  <kt-palette color="info" shade="dark" />
+  <kt-palette color="info" shade="darker" />
 </div>
 
 <div class="palette">
-  <kt-palette color="warningLightest" />
-  <kt-palette color="warningLighter" />
-  <kt-palette color="warningLight" />
+  <kt-palette color="warning" shade="lightest" />
+  <kt-palette color="warning" shade="lighter" />
+  <kt-palette color="warning" shade="light" />
   <kt-palette color="warning" />
-  <kt-palette color="warningDark" />
-  <kt-palette color="warningDarker" />
+  <kt-palette color="warning" shade="dark" />
+  <kt-palette color="warning" shade="darker" />
 </div>
 
 <div class="palette">
-  <kt-palette color="dangerLightest" />
-  <kt-palette color="dangerLighter" />
-  <kt-palette color="dangerLight" />
+  <kt-palette color="danger" shade="lightest" />
+  <kt-palette color="danger" shade="lighter" />
+  <kt-palette color="danger" shade="light" />
   <kt-palette color="danger" />
-  <kt-palette color="dangerDark" />
-  <kt-palette color="dangerDarker" />
+  <kt-palette color="danger" shade="dark" />
+  <kt-palette color="danger" shade="darker" />
 </div>
 
 <div class="palette">
-  <kt-palette color="grayLightest" />
-  <kt-palette color="grayLighter" />
-  <kt-palette color="grayLight" />
+  <kt-palette color="gray" shade="lightest" />
+  <kt-palette color="gray" shade="lighter" />
+  <kt-palette color="gray" shade="light" />
   <kt-palette color="gray" />
-  <kt-palette color="grayDark" />
-  <kt-palette color="grayDarker" />
+  <kt-palette color="gray" shade="dark" />
+  <kt-palette color="gray" shade="darker" />
 </div>
 
 <h2>button shape</h2>
@@ -113,14 +113,7 @@
 <kt-button size="small">small button</kt-button>
 <kt-button size="medium">medium button</kt-button>
 <kt-button size="large">large button</kt-button>
-<kt-button
-  size="custom"
-  fontsize="20"
-  radius="20"
-  pt="16"
-  pr="28"
-  pb="16"
-  pl="28">
+<kt-button size="custom" fontsize="20px" radius="20px" padding="20px 24px">
   custom button
 </kt-button>
 

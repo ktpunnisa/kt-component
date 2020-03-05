@@ -11,11 +11,12 @@ $colors: (
 );
 
 $shades: (
-  "lightest": 60%,
-  "lighter": 30%,
-  "light": 10%,
-  "dark": 20%,
-  "darker": 30%
+  "lightest": 0.6,
+  "lighter": 0.3,
+  "light": 0.1,
+  "base": 0,
+  "dark": 0.2,
+  "darker": 0.3
 );
 
 $button: (
@@ -23,37 +24,30 @@ $button: (
   "size": (
     "small": (
       "font-size": 14px,
-      "padding": (
-        "top": 8px,
-        "right": 12px,
-        "bottom": 8px,
-        "left": 12px
-      )
+      "padding": 8px 12px 8px 12px
     ),
     "medium": (
       "font-size": 16px,
-      "padding": (
-        "top": 12px,
-        "right": 20px,
-        "bottom": 12px,
-        "left": 20px
-      )
+      "padding": 12px 20px 12px 20px
     ),
     "large": (
       "font-size": 18px,
-      "padding": (
-        "top": 16px,
-        "right": 24px,
-        "bottom": 16px,
-        "left": 24px
-      )
+      "padding": 16px 24px 16px 24px
     )
   ),
   "type": (
     "default": (
       "normal": (
-        "font-color": map-get($colors, "white"),
-        "background-color": map-get($colors, "primary"),
+        "font": (
+          "type": "fixed",
+          "color": "white",
+          "shade": "base"
+        ),
+        "background": (
+          "type": "custom",
+          "color": "",
+          "shade": "base"
+        ),
         "border": none,
         "box-shadow": 0px 4px 8px rgba(0, 0, 0, 0.1)
       ),
