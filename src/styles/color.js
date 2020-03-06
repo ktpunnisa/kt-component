@@ -11,11 +11,11 @@ export default {
     black: '#232323'
   },
   shades: {
-    lightest: 0.6,
+    lightest: 0.65,
     lighter: 0.3,
     light: 0.1,
     base: 0,
-    dark: 0.2,
-    darker: 0.3
+    dark: 0.3,
+    darker: 0.5
   }
 };

@@ -5,14 +5,13 @@
 </script>
 
 <style type="text/scss" lang="scss">
-  @import "./styles/theme.scss";
-
   h1 {
     color: black;
   }
-  .palette {
+  .row {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   kt-button {
@@ -26,7 +25,7 @@
 <!-- <my-link url="https://www.facebook.com/ktpunnisa">{name}</my-link>s -->
 
 <h2>Color</h2>
-<div class="palette">
+<div class="row">
   <kt-palette color="primary" />
   <kt-palette color="secondary" />
   <kt-palette color="success" />
@@ -35,16 +34,16 @@
   <kt-palette color="danger" />
 </div>
 
-<div class="palette">
+<div class="row">
   <kt-palette color="white" />
   <kt-palette color="gray" />
   <kt-palette color="black" />
-  <kt-palette color="custom" colorcode="#8528CE" shade="light" opacity="0.3" />
+  <kt-palette color="#8E44AD" shade="dark" opacity="0.2" />
 </div>
 
 <h2>Color shade</h2>
 
-<div class="palette">
+<div class="row">
   <kt-palette color="primary" shade="lightest" />
   <kt-palette color="primary" shade="lighter" />
   <kt-palette color="primary" shade="light" />
@@ -53,7 +52,7 @@
   <kt-palette color="primary" shade="darker" />
 </div>
 
-<div class="palette">
+<div class="row">
   <kt-palette color="secondary" shade="lightest" />
   <kt-palette color="secondary" shade="lighter" />
   <kt-palette color="secondary" shade="light" />
@@ -62,7 +61,7 @@
   <kt-palette color="secondary" shade="darker" />
 </div>
 
-<div class="palette">
+<div class="row">
   <kt-palette color="success" shade="lightest" />
   <kt-palette color="success" shade="lighter" />
   <kt-palette color="success" shade="light" />
@@ -71,7 +70,7 @@
   <kt-palette color="success" shade="darker" />
 </div>
 
-<div class="palette">
+<div class="row">
   <kt-palette color="info" shade="lightest" />
   <kt-palette color="info" shade="lighter" />
   <kt-palette color="info" shade="light" />
@@ -80,7 +79,7 @@
   <kt-palette color="info" shade="darker" />
 </div>
 
-<div class="palette">
+<div class="row">
   <kt-palette color="warning" shade="lightest" />
   <kt-palette color="warning" shade="lighter" />
   <kt-palette color="warning" shade="light" />
@@ -89,7 +88,7 @@
   <kt-palette color="warning" shade="darker" />
 </div>
 
-<div class="palette">
+<div class="row">
   <kt-palette color="danger" shade="lightest" />
   <kt-palette color="danger" shade="lighter" />
   <kt-palette color="danger" shade="light" />
@@ -98,7 +97,7 @@
   <kt-palette color="danger" shade="darker" />
 </div>
 
-<div class="palette">
+<div class="row">
   <kt-palette color="gray" shade="lightest" />
   <kt-palette color="gray" shade="lighter" />
   <kt-palette color="gray" shade="light" />
@@ -108,13 +107,41 @@
 </div>
 
 <h2>button shape</h2>
-<kt-button>default button</kt-button>
-<kt-button disabled="true">disabled button</kt-button>
-<kt-button size="small">small button</kt-button>
-<kt-button size="medium">medium button</kt-button>
-<kt-button size="large">large button</kt-button>
-<kt-button size="custom" fontsize="20px" radius="20px" padding="20px 24px">
-  custom button
-</kt-button>
+<div class="row">
+  <kt-button>default button</kt-button>
+  <kt-button disabled="true">disabled button</kt-button>
+  <kt-button
+    size="custom"
+    fontsize="20px"
+    radius="20px"
+    padding="16px 24px"
+    color="#8E44AD">
+    custom button
+  </kt-button>
+</div>
+
+<div class="row">
+  <kt-button size="small">small button</kt-button>
+  <kt-button size="medium">medium button</kt-button>
+  <kt-button size="large">large button</kt-button>
+</div>
+
+<div class="row">
+  <kt-button type="default" color="info">default button</kt-button>
+  <kt-button type="outline" color="info">outline button</kt-button>
+  <kt-button type="ghost" color="info">ghost button</kt-button>
+</div>
+
+<div class="row">
+  <kt-button type="default" color="info" size="small" disabled="true">
+    default button
+  </kt-button>
+  <kt-button type="outline" color="info" size="small" disabled="true">
+    outline button
+  </kt-button>
+  <kt-button type="ghost" color="info" size="small" disabled="true">
+    ghost button
+  </kt-button>
+</div>
 
 <h2>----------</h2>
