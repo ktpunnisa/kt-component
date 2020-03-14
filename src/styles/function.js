@@ -18,3 +18,11 @@ export function getColorOpacity(hex, opacity) {
     16
   )},${opacity})`;
 }
+
+export function getBorderCSS(width, style, color) {
+  return `${width}px ${style} ${color}`;
+}
+
+export function getBoxShadowCSS(x, y, blur, spread, color) {
+  return `${x}px ${y}px ${blur}px ${spread}px ${color}`;
+}

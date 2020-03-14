@@ -1,17 +1,32 @@
 export default {
-  borderRadius: '4px',
+  borderRadius: 4,
   size: {
     small: {
-      fontSize: '14px',
-      padding: '8px 12px 8px 12px'
+      fontSize: 14,
+      padding: {
+        top: 8,
+        right: 12,
+        bottom: 8,
+        left: 12
+      }
     },
     medium: {
-      fontSize: '16px',
-      padding: '12px 20px 12px 20px'
+      fontSize: 16,
+      padding: {
+        top: 12,
+        right: 20,
+        bottom: 12,
+        left: 20
+      }
     },
     large: {
-      fontSize: '18px',
-      padding: '16px 24px 16px 24px'
+      fontSize: 18,
+      padding: {
+        top: 16,
+        right: 24,
+        bottom: 16,
+        left: 24
+      }
     }
   },
   type: {
@@ -28,17 +43,23 @@ export default {
           shade: 'base'
         },
         border: {
-          style: 'none',
-          type: 'transparent',
+          style: 'solid',
+          width: 1,
+          type: 'custom',
           color: '',
-          shade: ''
+          shade: 'base'
         },
-        boxShadow: {
-          style: '0px 4px 10px',
-          type: 'fixed',
-          color: 'black',
-          opacity: '0.1'
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 4,
+            blur: 10,
+            spread: 0,
+            type: 'fixed',
+            color: 'black',
+            opacity: 0.1
+          }
+        ]
       },
       hover: {
         font: {
@@ -52,17 +73,23 @@ export default {
           shade: 'light'
         },
         border: {
-          style: 'none',
-          type: 'transparent',
+          style: 'solid',
+          width: 1,
+          type: 'custom',
           color: '',
-          shade: ''
+          shade: 'light'
         },
-        boxShadow: {
-          style: '0px 4px 10px',
-          type: 'fixed',
-          color: 'black',
-          opacity: '0.2'
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 4,
+            blur: 10,
+            spread: 0,
+            type: 'fixed',
+            color: 'black',
+            opacity: 0.2
+          }
+        ]
       },
       pressed: {
         font: {
@@ -76,17 +103,23 @@ export default {
           shade: 'lighter'
         },
         border: {
-          style: 'none',
-          type: 'transparent',
+          style: 'solid',
+          width: 1,
+          type: 'custom',
           color: '',
-          shade: ''
+          shade: 'lighter'
         },
-        boxShadow: {
-          style: '0px 4px 10px',
-          type: 'fixed',
-          color: 'black',
-          opacity: '0.2'
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 4,
+            blur: 10,
+            spread: 0,
+            type: 'fixed',
+            color: 'black',
+            opacity: 0.2
+          }
+        ]
       },
       disabled: {
         font: {
@@ -100,17 +133,23 @@ export default {
           shade: 'lightest'
         },
         border: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          shade: ''
-        },
-        boxShadow: {
-          style: '0px 4px 10px',
+          style: 'solid',
+          width: 1,
           type: 'fixed',
-          color: 'black',
-          opacity: '0.1'
-        }
+          color: 'gray',
+          shade: 'lightest'
+        },
+        boxShadows: [
+          {
+            x: 0,
+            y: 4,
+            blur: 10,
+            spread: 0,
+            type: 'fixed',
+            color: 'black',
+            opacity: 0.1
+          }
+        ]
       }
     },
     outline: {
@@ -126,17 +165,23 @@ export default {
           shade: 'base'
         },
         border: {
-          style: '1px solid',
+          style: 'solid',
+          width: 1,
           type: 'custom',
           color: '',
           shade: 'base'
         },
-        boxShadow: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          opacity: ''
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 0,
+            blur: 0,
+            spread: 0,
+            type: 'transparent',
+            color: '',
+            opacity: 0
+          }
+        ]
       },
       hover: {
         font: {
@@ -150,17 +195,23 @@ export default {
           shade: 'base'
         },
         border: {
-          style: '1px solid',
+          style: 'solid',
+          width: 1,
           type: 'custom',
           color: '',
           shade: 'base'
         },
-        boxShadow: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          opacity: ''
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 0,
+            blur: 0,
+            spread: 0,
+            type: 'transparent',
+            color: '',
+            opacity: 0
+          }
+        ]
       },
       pressed: {
         font: {
@@ -174,17 +225,23 @@ export default {
           shade: 'lighter'
         },
         border: {
-          style: '1px solid',
+          style: 'solid',
+          width: 1,
           type: 'custom',
           color: '',
           shade: 'lighter'
         },
-        boxShadow: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          opacity: ''
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 0,
+            blur: 0,
+            spread: 0,
+            type: 'transparent',
+            color: '',
+            opacity: 0
+          }
+        ]
       },
       disabled: {
         font: {
@@ -198,17 +255,23 @@ export default {
           shade: 'base'
         },
         border: {
-          style: '1px solid',
+          style: 'solid',
+          width: 1,
           type: 'fixed',
           color: 'gray',
           shade: 'lighter'
         },
-        boxShadow: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          opacity: ''
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 0,
+            blur: 0,
+            spread: 0,
+            type: 'transparent',
+            color: '',
+            opacity: 0
+          }
+        ]
       }
     },
     ghost: {
@@ -224,17 +287,23 @@ export default {
           shade: ''
         },
         border: {
-          style: 'none',
+          style: 'solid',
+          width: 1,
           type: 'transparent',
           color: '',
           shade: ''
         },
-        boxShadow: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          shade: ''
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 0,
+            blur: 0,
+            spread: 0,
+            type: 'transparent',
+            color: '',
+            opacity: 0
+          }
+        ]
       },
       hover: {
         font: {
@@ -248,17 +317,23 @@ export default {
           shade: 'lightest'
         },
         border: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          shade: ''
+          style: 'solid',
+          width: 1,
+          type: 'fixed',
+          color: 'gray',
+          shade: 'lightest'
         },
-        boxShadow: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          shade: ''
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 0,
+            blur: 0,
+            spread: 0,
+            type: 'transparent',
+            color: '',
+            opacity: 0
+          }
+        ]
       },
       pressed: {
         font: {
@@ -272,17 +347,23 @@ export default {
           shade: 'lighter'
         },
         border: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          shade: ''
+          style: 'solid',
+          width: 1,
+          type: 'fixed',
+          color: 'gray',
+          shade: 'lighter'
         },
-        boxShadow: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          shade: ''
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 0,
+            blur: 0,
+            spread: 0,
+            type: 'transparent',
+            color: '',
+            opacity: 0
+          }
+        ]
       },
       disabled: {
         font: {
@@ -296,17 +377,23 @@ export default {
           shade: 'lightest'
         },
         border: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          shade: ''
+          style: 'solid',
+          width: 1,
+          type: 'fixed',
+          color: 'gray',
+          shade: 'lightest'
         },
-        boxShadow: {
-          style: 'none',
-          type: 'transparent',
-          color: '',
-          shade: ''
-        }
+        boxShadows: [
+          {
+            x: 0,
+            y: 0,
+            blur: 0,
+            spread: 0,
+            type: 'transparent',
+            color: '',
+            opacity: 0
+          }
+        ]
       }
     }
   }

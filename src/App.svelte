@@ -112,9 +112,12 @@
   <kt-button disabled="true">disabled button</kt-button>
   <kt-button
     size="custom"
-    fontsize="20px"
-    radius="20px"
-    padding="16px 24px"
+    fontsize="20"
+    radius="20"
+    pt="16"
+    pr="24"
+    pb="16"
+    pl="24"
     color="#8E44AD">
     custom button
   </kt-button>
