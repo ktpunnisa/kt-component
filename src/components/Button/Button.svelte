@@ -25,6 +25,7 @@
   const colorTheme = Object.keys(colorStyle.colors);
   $: colorcode = colorTheme.includes(color) ? colorStyle.colors[color] : color;
 
+  $: btnShape = buttonStyle.shape;
   $: btnSize = buttonStyle.size[size];
   $: btnType = buttonStyle.type[type];
 
@@ -75,7 +76,7 @@
 
   $: styleVars = {
     // shape
-    radius: size != "custom" ? `${buttonStyle.borderRadius}px` : `${radius}px`,
+    radius: size != "custom" ? `${btnShape.borderRadius}px` : `${radius}px`,
 
     // size
     fontsize: size != "custom" ? `${btnSize.fontSize}px` : `${fontsize}px`,
@@ -89,8 +90,8 @@
     fontcolor: getColorShade("normal", "font", colorcode),
     bgcolor: getColorShade("normal", "background", colorcode),
     border: getBorderCSS(
-      btnType["normal"]["border"].width,
-      btnType["normal"]["border"].style,
+      btnShape.borderWidth,
+      btnShape.borderStyle,
       getColorShade("normal", "border", colorcode)
     ),
     boxshadow: getBoxShadow("normal"),
@@ -99,8 +100,8 @@
     fontcolorhover: getColorShade("hover", "font", colorcode),
     bgcolorhover: getColorShade("hover", "background", colorcode),
     borderhover: getBorderCSS(
-      btnType["hover"]["border"].width,
-      btnType["hover"]["border"].style,
+      btnShape.borderWidth,
+      btnShape.borderStyle,
       getColorShade("hover", "border", colorcode)
     ),
     boxshadowhover: getBoxShadow("hover"),
@@ -109,8 +110,8 @@
     fontcolorpressed: getColorShade("pressed", "font", colorcode),
     bgcolorpressed: getColorShade("pressed", "background", colorcode),
     borderpressed: getBorderCSS(
-      btnType["pressed"]["border"].width,
-      btnType["pressed"]["border"].style,
+      btnShape.borderWidth,
+      btnShape.borderStyle,
       getColorShade("pressed", "border", colorcode)
     ),
     boxshadowpressed: getBoxShadow("pressed"),
@@ -119,8 +120,8 @@
     fontcolordisabled: getColorShade("disabled", "font", colorcode),
     bgcolordisabled: getColorShade("disabled", "background", colorcode),
     borderdisabled: getBorderCSS(
-      btnType["disabled"]["border"].width,
-      btnType["disabled"]["border"].style,
+      btnShape.borderWidth,
+      btnShape.borderStyle,
       getColorShade("disabled", "border", colorcode)
     ),
     boxshadowdisabled: getBoxShadow("disabled")

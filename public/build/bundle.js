@@ -3579,7 +3579,11 @@ var app = (function (exports) {
     };
 
     var buttonStyle = {
-      borderRadius: 4,
+      shape: {
+        borderRadius: 4,
+        borderStyle: 'solid',
+        borderWidth: 1,
+      },
       size: {
         small: {
           fontSize: 14,
@@ -3587,8 +3591,8 @@ var app = (function (exports) {
             top: 8,
             right: 12,
             bottom: 8,
-            left: 12
-          }
+            left: 12,
+          },
         },
         medium: {
           fontSize: 16,
@@ -3596,8 +3600,8 @@ var app = (function (exports) {
             top: 12,
             right: 20,
             bottom: 12,
-            left: 20
-          }
+            left: 20,
+          },
         },
         large: {
           fontSize: 18,
@@ -3605,9 +3609,9 @@ var app = (function (exports) {
             top: 16,
             right: 24,
             bottom: 16,
-            left: 24
-          }
-        }
+            left: 24,
+          },
+        },
       },
       type: {
         default: {
@@ -3615,19 +3619,17 @@ var app = (function (exports) {
             font: {
               type: 'fixed',
               color: 'white',
-              shade: 'base'
+              shade: 'base',
             },
             background: {
               type: 'custom',
               color: '',
-              shade: 'base'
+              shade: 'base',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'custom',
               color: '',
-              shade: 'base'
+              shade: 'base',
             },
             boxShadows: [
               {
@@ -3637,27 +3639,25 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'fixed',
                 color: 'black',
-                opacity: 0.1
-              }
-            ]
+                opacity: 0.1,
+              },
+            ],
           },
           hover: {
             font: {
               type: 'fixed',
               color: 'white',
-              shade: 'base'
+              shade: 'base',
             },
             background: {
               type: 'custom',
               color: '',
-              shade: 'light'
+              shade: 'light',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'custom',
               color: '',
-              shade: 'light'
+              shade: 'light',
             },
             boxShadows: [
               {
@@ -3667,27 +3667,25 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'fixed',
                 color: 'black',
-                opacity: 0.2
-              }
-            ]
+                opacity: 0.2,
+              },
+            ],
           },
           pressed: {
             font: {
               type: 'fixed',
               color: 'white',
-              shade: 'base'
+              shade: 'base',
             },
             background: {
               type: 'custom',
               color: '',
-              shade: 'lighter'
+              shade: 'lighter',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'custom',
               color: '',
-              shade: 'lighter'
+              shade: 'lighter',
             },
             boxShadows: [
               {
@@ -3697,27 +3695,25 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'fixed',
                 color: 'black',
-                opacity: 0.2
-              }
-            ]
+                opacity: 0.2,
+              },
+            ],
           },
           disabled: {
             font: {
               type: 'fixed',
               color: 'gray',
-              shade: 'lighter'
+              shade: 'lighter',
             },
             background: {
               type: 'fixed',
               color: 'gray',
-              shade: 'lightest'
+              shade: 'lightest',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'fixed',
               color: 'gray',
-              shade: 'lightest'
+              shade: 'lightest',
             },
             boxShadows: [
               {
@@ -3727,29 +3723,27 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'fixed',
                 color: 'black',
-                opacity: 0.1
-              }
-            ]
-          }
+                opacity: 0.1,
+              },
+            ],
+          },
         },
         outline: {
           normal: {
             font: {
               type: 'custom',
               color: '',
-              shade: 'base'
+              shade: 'base',
             },
             background: {
               type: 'fixed',
               color: 'white',
-              shade: 'base'
+              shade: 'base',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'custom',
               color: '',
-              shade: 'base'
+              shade: 'base',
             },
             boxShadows: [
               {
@@ -3759,27 +3753,25 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'transparent',
                 color: '',
-                opacity: 0
-              }
-            ]
+                opacity: 0,
+              },
+            ],
           },
           hover: {
             font: {
               type: 'fixed',
               color: 'white',
-              shade: 'base'
+              shade: 'base',
             },
             background: {
               type: 'custom',
               color: '',
-              shade: 'base'
+              shade: 'base',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'custom',
               color: '',
-              shade: 'base'
+              shade: 'base',
             },
             boxShadows: [
               {
@@ -3789,27 +3781,25 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'transparent',
                 color: '',
-                opacity: 0
-              }
-            ]
+                opacity: 0,
+              },
+            ],
           },
           pressed: {
             font: {
               type: 'fixed',
               color: 'white',
-              shade: 'base'
+              shade: 'base',
             },
             background: {
               type: 'custom',
               color: '',
-              shade: 'lighter'
+              shade: 'lighter',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'custom',
               color: '',
-              shade: 'lighter'
+              shade: 'lighter',
             },
             boxShadows: [
               {
@@ -3819,27 +3809,25 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'transparent',
                 color: '',
-                opacity: 0
-              }
-            ]
+                opacity: 0,
+              },
+            ],
           },
           disabled: {
             font: {
               type: 'fixed',
               color: 'gray',
-              shade: 'lighter'
+              shade: 'lighter',
             },
             background: {
               type: 'fixed',
               color: 'white',
-              shade: 'base'
+              shade: 'base',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'fixed',
               color: 'gray',
-              shade: 'lighter'
+              shade: 'lighter',
             },
             boxShadows: [
               {
@@ -3849,29 +3837,27 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'transparent',
                 color: '',
-                opacity: 0
-              }
-            ]
-          }
+                opacity: 0,
+              },
+            ],
+          },
         },
         ghost: {
           normal: {
             font: {
               type: 'custom',
               color: '',
-              shade: 'base'
+              shade: 'base',
             },
             background: {
               type: 'transparent',
               color: '',
-              shade: ''
+              shade: '',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'transparent',
               color: '',
-              shade: ''
+              shade: '',
             },
             boxShadows: [
               {
@@ -3881,27 +3867,25 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'transparent',
                 color: '',
-                opacity: 0
-              }
-            ]
+                opacity: 0,
+              },
+            ],
           },
           hover: {
             font: {
               type: 'custom',
               color: '',
-              shade: 'base'
+              shade: 'base',
             },
             background: {
               type: 'fixed',
               color: 'gray',
-              shade: 'lightest'
+              shade: 'lightest',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'fixed',
               color: 'gray',
-              shade: 'lightest'
+              shade: 'lightest',
             },
             boxShadows: [
               {
@@ -3911,27 +3895,25 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'transparent',
                 color: '',
-                opacity: 0
-              }
-            ]
+                opacity: 0,
+              },
+            ],
           },
           pressed: {
             font: {
               type: 'custom',
               color: '',
-              shade: 'base'
+              shade: 'base',
             },
             background: {
               type: 'fixed',
               color: 'gray',
-              shade: 'lighter'
+              shade: 'lighter',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'fixed',
               color: 'gray',
-              shade: 'lighter'
+              shade: 'lighter',
             },
             boxShadows: [
               {
@@ -3941,27 +3923,25 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'transparent',
                 color: '',
-                opacity: 0
-              }
-            ]
+                opacity: 0,
+              },
+            ],
           },
           disabled: {
             font: {
               type: 'fixed',
               color: 'gray',
-              shade: 'lighter'
+              shade: 'lighter',
             },
             background: {
               type: 'fixed',
               color: 'gray',
-              shade: 'lightest'
+              shade: 'lightest',
             },
             border: {
-              style: 'solid',
-              width: 1,
               type: 'fixed',
               color: 'gray',
-              shade: 'lightest'
+              shade: 'lightest',
             },
             boxShadows: [
               {
@@ -3971,12 +3951,12 @@ var app = (function (exports) {
                 spread: 0,
                 type: 'transparent',
                 color: '',
-                opacity: 0
-              }
-            ]
-          }
-        }
-      }
+                opacity: 0,
+              },
+            ],
+          },
+        },
+      },
     };
 
     function mixColorShade(color, shade, opacity) {
@@ -4023,9 +4003,9 @@ var app = (function (exports) {
     			button = element("button");
     			slot = element("slot");
     			this.c = noop;
-    			add_location(slot, file, 159, 2, 5033);
+    			add_location(slot, file, 160, 2, 4957);
     			button.disabled = /*disabled*/ ctx[0];
-    			add_location(button, file, 158, 0, 4987);
+    			add_location(button, file, 159, 0, 4911);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4165,6 +4145,7 @@ var app = (function (exports) {
     			pr,
     			pb,
     			pl,
+    			btnShape,
     			btnSize,
     			btnType,
     			styleVars
@@ -4183,11 +4164,13 @@ var app = (function (exports) {
     		if ("pr" in $$props) $$invalidate(9, pr = $$props.pr);
     		if ("pb" in $$props) $$invalidate(10, pb = $$props.pb);
     		if ("pl" in $$props) $$invalidate(11, pl = $$props.pl);
-    		if ("btnSize" in $$props) $$invalidate(12, btnSize = $$props.btnSize);
-    		if ("btnType" in $$props) $$invalidate(13, btnType = $$props.btnType);
+    		if ("btnShape" in $$props) $$invalidate(12, btnShape = $$props.btnShape);
+    		if ("btnSize" in $$props) $$invalidate(13, btnSize = $$props.btnSize);
+    		if ("btnType" in $$props) btnType = $$props.btnType;
     		if ("styleVars" in $$props) $$invalidate(1, styleVars = $$props.styleVars);
     	};
 
+    	let btnShape;
     	let btnSize;
     	let btnType;
     	let styleVars;
@@ -4200,18 +4183,18 @@ var app = (function (exports) {
     		}
 
     		if ($$self.$$.dirty & /*size*/ 8) {
-    			 $$invalidate(12, btnSize = buttonStyle.size[size]);
+    			 $$invalidate(13, btnSize = buttonStyle.size[size]);
     		}
 
     		if ($$self.$$.dirty & /*type*/ 16) {
-    			 $$invalidate(13, btnType = buttonStyle.type[type]);
+    			 btnType = buttonStyle.type[type];
     		}
 
-    		if ($$self.$$.dirty & /*size, radius, btnSize, fontsize, pt, pr, pb, pl, colorcode, btnType*/ 16332) {
+    		if ($$self.$$.dirty & /*size, btnShape, radius, btnSize, fontsize, pt, pr, pb, pl, colorcode*/ 16332) {
     			 $$invalidate(1, styleVars = {
     				// shape
     				radius: size != "custom"
-    				? `${buttonStyle.borderRadius}px`
+    				? `${btnShape.borderRadius}px`
     				: `${radius}px`,
     				// size
     				fontsize: size != "custom"
@@ -4224,26 +4207,28 @@ var app = (function (exports) {
     				// type
     				fontcolor: getColorShade("normal", "font", colorcode),
     				bgcolor: getColorShade("normal", "background", colorcode),
-    				border: getBorderCSS(btnType["normal"]["border"].width, btnType["normal"]["border"].style, getColorShade("normal", "border", colorcode)),
+    				border: getBorderCSS(btnShape.borderWidth, btnShape.borderStyle, getColorShade("normal", "border", colorcode)),
     				boxshadow: getBoxShadow("normal"),
     				// type:hover
     				fontcolorhover: getColorShade("hover", "font", colorcode),
     				bgcolorhover: getColorShade("hover", "background", colorcode),
-    				borderhover: getBorderCSS(btnType["hover"]["border"].width, btnType["hover"]["border"].style, getColorShade("hover", "border", colorcode)),
+    				borderhover: getBorderCSS(btnShape.borderWidth, btnShape.borderStyle, getColorShade("hover", "border", colorcode)),
     				boxshadowhover: getBoxShadow("hover"),
     				// type:pressed
     				fontcolorpressed: getColorShade("pressed", "font", colorcode),
     				bgcolorpressed: getColorShade("pressed", "background", colorcode),
-    				borderpressed: getBorderCSS(btnType["pressed"]["border"].width, btnType["pressed"]["border"].style, getColorShade("pressed", "border", colorcode)),
+    				borderpressed: getBorderCSS(btnShape.borderWidth, btnShape.borderStyle, getColorShade("pressed", "border", colorcode)),
     				boxshadowpressed: getBoxShadow("pressed"),
     				// type:disabled
     				fontcolordisabled: getColorShade("disabled", "font", colorcode),
     				bgcolordisabled: getColorShade("disabled", "background", colorcode),
-    				borderdisabled: getBorderCSS(btnType["disabled"]["border"].width, btnType["disabled"]["border"].style, getColorShade("disabled", "border", colorcode)),
+    				borderdisabled: getBorderCSS(btnShape.borderWidth, btnShape.borderStyle, getColorShade("disabled", "border", colorcode)),
     				boxshadowdisabled: getBoxShadow("disabled")
     			});
     		}
     	};
+
+    	 $$invalidate(12, btnShape = buttonStyle.shape);
 
     	return [
     		disabled,

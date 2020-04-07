@@ -1,5 +1,9 @@
 export default {
-  borderRadius: 4,
+  shape: {
+    borderRadius: 4,
+    borderStyle: 'solid',
+    borderWidth: 1,
+  },
   size: {
     small: {
       fontSize: 14,
@@ -7,8 +11,8 @@ export default {
         top: 8,
         right: 12,
         bottom: 8,
-        left: 12
-      }
+        left: 12,
+      },
     },
     medium: {
       fontSize: 16,
@@ -16,8 +20,8 @@ export default {
         top: 12,
         right: 20,
         bottom: 12,
-        left: 20
-      }
+        left: 20,
+      },
     },
     large: {
       fontSize: 18,
@@ -25,9 +29,9 @@ export default {
         top: 16,
         right: 24,
         bottom: 16,
-        left: 24
-      }
-    }
+        left: 24,
+      },
+    },
   },
   type: {
     default: {
@@ -35,19 +39,17 @@ export default {
         font: {
           type: 'fixed',
           color: 'white',
-          shade: 'base'
+          shade: 'base',
         },
         background: {
           type: 'custom',
           color: '',
-          shade: 'base'
+          shade: 'base',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'custom',
           color: '',
-          shade: 'base'
+          shade: 'base',
         },
         boxShadows: [
           {
@@ -57,27 +59,25 @@ export default {
             spread: 0,
             type: 'fixed',
             color: 'black',
-            opacity: 0.1
-          }
-        ]
+            opacity: 0.1,
+          },
+        ],
       },
       hover: {
         font: {
           type: 'fixed',
           color: 'white',
-          shade: 'base'
+          shade: 'base',
         },
         background: {
           type: 'custom',
           color: '',
-          shade: 'light'
+          shade: 'light',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'custom',
           color: '',
-          shade: 'light'
+          shade: 'light',
         },
         boxShadows: [
           {
@@ -87,27 +87,25 @@ export default {
             spread: 0,
             type: 'fixed',
             color: 'black',
-            opacity: 0.2
-          }
-        ]
+            opacity: 0.2,
+          },
+        ],
       },
       pressed: {
         font: {
           type: 'fixed',
           color: 'white',
-          shade: 'base'
+          shade: 'base',
         },
         background: {
           type: 'custom',
           color: '',
-          shade: 'lighter'
+          shade: 'lighter',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'custom',
           color: '',
-          shade: 'lighter'
+          shade: 'lighter',
         },
         boxShadows: [
           {
@@ -117,27 +115,25 @@ export default {
             spread: 0,
             type: 'fixed',
             color: 'black',
-            opacity: 0.2
-          }
-        ]
+            opacity: 0.2,
+          },
+        ],
       },
       disabled: {
         font: {
           type: 'fixed',
           color: 'gray',
-          shade: 'lighter'
+          shade: 'lighter',
         },
         background: {
           type: 'fixed',
           color: 'gray',
-          shade: 'lightest'
+          shade: 'lightest',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'fixed',
           color: 'gray',
-          shade: 'lightest'
+          shade: 'lightest',
         },
         boxShadows: [
           {
@@ -147,29 +143,27 @@ export default {
             spread: 0,
             type: 'fixed',
             color: 'black',
-            opacity: 0.1
-          }
-        ]
-      }
+            opacity: 0.1,
+          },
+        ],
+      },
     },
     outline: {
       normal: {
         font: {
           type: 'custom',
           color: '',
-          shade: 'base'
+          shade: 'base',
         },
         background: {
           type: 'fixed',
           color: 'white',
-          shade: 'base'
+          shade: 'base',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'custom',
           color: '',
-          shade: 'base'
+          shade: 'base',
         },
         boxShadows: [
           {
@@ -179,27 +173,25 @@ export default {
             spread: 0,
             type: 'transparent',
             color: '',
-            opacity: 0
-          }
-        ]
+            opacity: 0,
+          },
+        ],
       },
       hover: {
         font: {
           type: 'fixed',
           color: 'white',
-          shade: 'base'
+          shade: 'base',
         },
         background: {
           type: 'custom',
           color: '',
-          shade: 'base'
+          shade: 'base',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'custom',
           color: '',
-          shade: 'base'
+          shade: 'base',
         },
         boxShadows: [
           {
@@ -209,27 +201,25 @@ export default {
             spread: 0,
             type: 'transparent',
             color: '',
-            opacity: 0
-          }
-        ]
+            opacity: 0,
+          },
+        ],
       },
       pressed: {
         font: {
           type: 'fixed',
           color: 'white',
-          shade: 'base'
+          shade: 'base',
         },
         background: {
           type: 'custom',
           color: '',
-          shade: 'lighter'
+          shade: 'lighter',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'custom',
           color: '',
-          shade: 'lighter'
+          shade: 'lighter',
         },
         boxShadows: [
           {
@@ -239,27 +229,25 @@ export default {
             spread: 0,
             type: 'transparent',
             color: '',
-            opacity: 0
-          }
-        ]
+            opacity: 0,
+          },
+        ],
       },
       disabled: {
         font: {
           type: 'fixed',
           color: 'gray',
-          shade: 'lighter'
+          shade: 'lighter',
         },
         background: {
           type: 'fixed',
           color: 'white',
-          shade: 'base'
+          shade: 'base',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'fixed',
           color: 'gray',
-          shade: 'lighter'
+          shade: 'lighter',
         },
         boxShadows: [
           {
@@ -269,29 +257,27 @@ export default {
             spread: 0,
             type: 'transparent',
             color: '',
-            opacity: 0
-          }
-        ]
-      }
+            opacity: 0,
+          },
+        ],
+      },
     },
     ghost: {
       normal: {
         font: {
           type: 'custom',
           color: '',
-          shade: 'base'
+          shade: 'base',
         },
         background: {
           type: 'transparent',
           color: '',
-          shade: ''
+          shade: '',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'transparent',
           color: '',
-          shade: ''
+          shade: '',
         },
         boxShadows: [
           {
@@ -301,27 +287,25 @@ export default {
             spread: 0,
             type: 'transparent',
             color: '',
-            opacity: 0
-          }
-        ]
+            opacity: 0,
+          },
+        ],
       },
       hover: {
         font: {
           type: 'custom',
           color: '',
-          shade: 'base'
+          shade: 'base',
         },
         background: {
           type: 'fixed',
           color: 'gray',
-          shade: 'lightest'
+          shade: 'lightest',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'fixed',
           color: 'gray',
-          shade: 'lightest'
+          shade: 'lightest',
         },
         boxShadows: [
           {
@@ -331,27 +315,25 @@ export default {
             spread: 0,
             type: 'transparent',
             color: '',
-            opacity: 0
-          }
-        ]
+            opacity: 0,
+          },
+        ],
       },
       pressed: {
         font: {
           type: 'custom',
           color: '',
-          shade: 'base'
+          shade: 'base',
         },
         background: {
           type: 'fixed',
           color: 'gray',
-          shade: 'lighter'
+          shade: 'lighter',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'fixed',
           color: 'gray',
-          shade: 'lighter'
+          shade: 'lighter',
         },
         boxShadows: [
           {
@@ -361,27 +343,25 @@ export default {
             spread: 0,
             type: 'transparent',
             color: '',
-            opacity: 0
-          }
-        ]
+            opacity: 0,
+          },
+        ],
       },
       disabled: {
         font: {
           type: 'fixed',
           color: 'gray',
-          shade: 'lighter'
+          shade: 'lighter',
         },
         background: {
           type: 'fixed',
           color: 'gray',
-          shade: 'lightest'
+          shade: 'lightest',
         },
         border: {
-          style: 'solid',
-          width: 1,
           type: 'fixed',
           color: 'gray',
-          shade: 'lightest'
+          shade: 'lightest',
         },
         boxShadows: [
           {
@@ -391,10 +371,10 @@ export default {
             spread: 0,
             type: 'transparent',
             color: '',
-            opacity: 0
-          }
-        ]
-      }
-    }
-  }
+            opacity: 0,
+          },
+        ],
+      },
+    },
+  },
 };
