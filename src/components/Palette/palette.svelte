@@ -1,6 +1,6 @@
 <script>
   import cssVars from "../../svelte-css-vars.js";
-  import colorStyle from "../../styles/color.js";
+  import colorToken from "../../styles/color.js";
   import { mixColorShade } from "../../styles/function.js";
   export let width = "100";
   export let height = "40";
@@ -10,9 +10,9 @@
   export let shade = "base";
   export let opacity = 0;
 
-  const colorTheme = Object.keys(colorStyle.colors);
-  $: colorcode = colorTheme.includes(color) ? colorStyle.colors[color] : color;
-  $: opacity = colorTheme.includes(color) ? colorStyle.shades[shade] : opacity;
+  const colorTheme = Object.keys(colorToken.themes);
+  $: colorcode = colorTheme.includes(color) ? colorToken.themes[color] : color;
+  $: opacity = colorTheme.includes(color) ? colorToken.shades[shade] : opacity;
 
   $: styleVars = {
     width: `${width}px`,

@@ -1,5 +1,5 @@
 export default {
-  colors: {
+  themes: {
     primary: '#ff8879',
     secondary: '#009ba6',
     success: '#00dcc7',
@@ -8,7 +8,7 @@ export default {
     danger: '#ff647c',
     white: '#ffffff',
     gray: '#818181',
-    black: '#232323'
+    black: '#232323',
   },
   shades: {
     lightest: 0.65,
@@ -16,6 +16,6 @@ export default {
     light: 0.1,
     base: 0,
     dark: 0.3,
-    darker: 0.5
-  }
+    darker: 0.5,
+  },
 };

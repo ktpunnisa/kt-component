@@ -3556,8 +3556,8 @@ var app = (function (exports) {
       };
     };
 
-    var colorStyle = {
-      colors: {
+    var colorToken = {
+      themes: {
         primary: '#ff8879',
         secondary: '#009ba6',
         success: '#00dcc7',
@@ -3566,7 +3566,7 @@ var app = (function (exports) {
         danger: '#ff647c',
         white: '#ffffff',
         gray: '#818181',
-        black: '#232323'
+        black: '#232323',
       },
       shades: {
         lightest: 0.65,
@@ -3574,17 +3574,17 @@ var app = (function (exports) {
         light: 0.1,
         base: 0,
         dark: 0.3,
-        darker: 0.5
-      }
+        darker: 0.5,
+      },
     };
 
-    var buttonStyle = {
+    var buttonToken = {
       shape: {
         borderRadius: 4,
         borderStyle: 'solid',
         borderWidth: 1,
       },
-      size: {
+      sizes: {
         small: {
           fontSize: 14,
           padding: {
@@ -3613,7 +3613,7 @@ var app = (function (exports) {
           },
         },
       },
-      type: {
+      types: {
         default: {
           normal: {
             font: {
@@ -4003,9 +4003,9 @@ var app = (function (exports) {
     			button = element("button");
     			slot = element("slot");
     			this.c = noop;
-    			add_location(slot, file, 160, 2, 4957);
+    			add_location(slot, file, 160, 2, 4959);
     			button.disabled = /*disabled*/ ctx[0];
-    			add_location(button, file, 159, 0, 4911);
+    			add_location(button, file, 159, 0, 4913);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4053,11 +4053,11 @@ var app = (function (exports) {
     	let { pr = 20 } = $$props;
     	let { pb = 12 } = $$props;
     	let { pl = 20 } = $$props;
-    	const colorTheme = Object.keys(colorStyle.colors);
+    	const colorTheme = Object.keys(colorToken.themes);
 
     	function getBaseColor(state, style, colorcode) {
     		return btnType[state][style].type === "fixed"
-    		? colorStyle.colors[btnType[state][style].color]
+    		? colorToken.themes[btnType[state][style].color]
     		: colorcode;
     	}
 
@@ -4068,7 +4068,7 @@ var app = (function (exports) {
 
     		const color = getBaseColor(state, style, colorcode);
     		const shade = btnType[state][style].shade;
-    		const opacity = colorStyle.shades[btnType[state][style].shade];
+    		const opacity = colorToken.shades[btnType[state][style].shade];
     		return mixColorShade(color, shade, opacity);
     	}
 
@@ -4078,7 +4078,7 @@ var app = (function (exports) {
     		}
 
     		const color = boxShadow.type === "fixed"
-    		? colorStyle.colors[boxShadow.color]
+    		? colorToken.themes[boxShadow.color]
     		: colorcode;
 
     		const opacity = boxShadow.opacity;
@@ -4178,16 +4178,16 @@ var app = (function (exports) {
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty & /*color*/ 32) {
     			 $$invalidate(2, colorcode = colorTheme.includes(color)
-    			? colorStyle.colors[color]
+    			? colorToken.themes[color]
     			: color);
     		}
 
     		if ($$self.$$.dirty & /*size*/ 8) {
-    			 $$invalidate(13, btnSize = buttonStyle.size[size]);
+    			 $$invalidate(13, btnSize = buttonToken.sizes[size]);
     		}
 
     		if ($$self.$$.dirty & /*type*/ 16) {
-    			 btnType = buttonStyle.type[type];
+    			 btnType = buttonToken.types[type];
     		}
 
     		if ($$self.$$.dirty & /*size, btnShape, radius, btnSize, fontsize, pt, pr, pb, pl, colorcode*/ 16332) {
@@ -4228,7 +4228,7 @@ var app = (function (exports) {
     		}
     	};
 
-    	 $$invalidate(12, btnShape = buttonStyle.shape);
+    	 $$invalidate(12, btnShape = buttonToken.shape);
 
     	return [
     		disabled,
@@ -4569,7 +4569,7 @@ var app = (function (exports) {
     	let { colorcode = "#ff8879" } = $$props;
     	let { shade = "base" } = $$props;
     	let { opacity = 0 } = $$props;
-    	const colorTheme = Object.keys(colorStyle.colors);
+    	const colorTheme = Object.keys(colorToken.themes);
     	const writable_props = ["width", "height", "radius", "color", "colorcode", "shade", "opacity"];
 
     	Object_1$1.keys($$props).forEach(key => {
@@ -4615,13 +4615,13 @@ var app = (function (exports) {
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty & /*color*/ 64) {
     			 $$invalidate(1, colorcode = colorTheme.includes(color)
-    			? colorStyle.colors[color]
+    			? colorToken.themes[color]
     			: color);
     		}
 
     		if ($$self.$$.dirty & /*color, shade, opacity*/ 196) {
     			 $$invalidate(2, opacity = colorTheme.includes(color)
-    			? colorStyle.shades[shade]
+    			? colorToken.shades[shade]
     			: opacity);
     		}
 

@@ -4,7 +4,7 @@ export default {
     borderStyle: 'solid',
     borderWidth: 1,
   },
-  size: {
+  sizes: {
     small: {
       fontSize: 14,
       padding: {
@@ -33,7 +33,7 @@ export default {
       },
     },
   },
-  type: {
+  types: {
     default: {
       normal: {
         font: {

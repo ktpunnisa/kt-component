@@ -1,8 +1,8 @@
 <script>
   import chroma from "chroma-js";
   import cssVars from "../../svelte-css-vars.js";
-  import colorStyle from "../../styles/color.js";
-  import buttonStyle from "../../styles/button.js";
+  import colorToken from "../../styles/color.js";
+  import buttonToken from "../../styles/button.js";
   import {
     mixColorShade,
     getColorOpacity,
@@ -22,16 +22,16 @@
   export let pb = 12;
   export let pl = 20;
 
-  const colorTheme = Object.keys(colorStyle.colors);
-  $: colorcode = colorTheme.includes(color) ? colorStyle.colors[color] : color;
+  const colorTheme = Object.keys(colorToken.themes);
+  $: colorcode = colorTheme.includes(color) ? colorToken.themes[color] : color;
 
-  $: btnShape = buttonStyle.shape;
-  $: btnSize = buttonStyle.size[size];
-  $: btnType = buttonStyle.type[type];
+  $: btnShape = buttonToken.shape;
+  $: btnSize = buttonToken.sizes[size];
+  $: btnType = buttonToken.types[type];
 
   function getBaseColor(state, style, colorcode) {
     return btnType[state][style].type === "fixed"
-      ? colorStyle.colors[btnType[state][style].color]
+      ? colorToken.themes[btnType[state][style].color]
       : colorcode;
   }
 
@@ -41,7 +41,7 @@
     }
     const color = getBaseColor(state, style, colorcode);
     const shade = btnType[state][style].shade;
-    const opacity = colorStyle.shades[btnType[state][style].shade];
+    const opacity = colorToken.shades[btnType[state][style].shade];
     return mixColorShade(color, shade, opacity);
   }
 
@@ -51,7 +51,7 @@
     }
     const color =
       boxShadow.type === "fixed"
-        ? colorStyle.colors[boxShadow.color]
+        ? colorToken.themes[boxShadow.color]
         : colorcode;
     const opacity = boxShadow.opacity;
     return getColorOpacity(color, opacity);
