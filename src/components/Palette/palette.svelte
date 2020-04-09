@@ -7,7 +7,7 @@
   export let radius = "8";
   export let color = "primary";
   export let colorcode = "#ff8879";
-  export let shade = "base";
+  export let shade = "default";
   export let opacity = 0;
 
   const colorTheme = Object.keys(colorToken.themes);

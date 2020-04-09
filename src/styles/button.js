@@ -39,17 +39,17 @@ export default {
         font: {
           type: 'fixed',
           color: 'white',
-          shade: 'base',
+          shade: 'default',
         },
         background: {
           type: 'custom',
           color: '',
-          shade: 'base',
+          shade: 'default',
         },
         border: {
           type: 'custom',
           color: '',
-          shade: 'base',
+          shade: 'default',
         },
         boxShadows: [
           {
@@ -67,7 +67,7 @@ export default {
         font: {
           type: 'fixed',
           color: 'white',
-          shade: 'base',
+          shade: 'default',
         },
         background: {
           type: 'custom',
@@ -95,7 +95,7 @@ export default {
         font: {
           type: 'fixed',
           color: 'white',
-          shade: 'base',
+          shade: 'default',
         },
         background: {
           type: 'custom',
@@ -153,17 +153,17 @@ export default {
         font: {
           type: 'custom',
           color: '',
-          shade: 'base',
+          shade: 'default',
         },
         background: {
           type: 'fixed',
           color: 'white',
-          shade: 'base',
+          shade: 'default',
         },
         border: {
           type: 'custom',
           color: '',
-          shade: 'base',
+          shade: 'default',
         },
         boxShadows: [
           {
@@ -181,17 +181,17 @@ export default {
         font: {
           type: 'fixed',
           color: 'white',
-          shade: 'base',
+          shade: 'default',
         },
         background: {
           type: 'custom',
           color: '',
-          shade: 'base',
+          shade: 'default',
         },
         border: {
           type: 'custom',
           color: '',
-          shade: 'base',
+          shade: 'default',
         },
         boxShadows: [
           {
@@ -209,7 +209,7 @@ export default {
         font: {
           type: 'fixed',
           color: 'white',
-          shade: 'base',
+          shade: 'default',
         },
         background: {
           type: 'custom',
@@ -242,7 +242,7 @@ export default {
         background: {
           type: 'fixed',
           color: 'white',
-          shade: 'base',
+          shade: 'default',
         },
         border: {
           type: 'fixed',
@@ -267,7 +267,7 @@ export default {
         font: {
           type: 'custom',
           color: '',
-          shade: 'base',
+          shade: 'default',
         },
         background: {
           type: 'transparent',
@@ -295,7 +295,7 @@ export default {
         font: {
           type: 'custom',
           color: '',
-          shade: 'base',
+          shade: 'default',
         },
         background: {
           type: 'fixed',
@@ -323,7 +323,7 @@ export default {
         font: {
           type: 'custom',
           color: '',
-          shade: 'base',
+          shade: 'default',
         },
         background: {
           type: 'fixed',

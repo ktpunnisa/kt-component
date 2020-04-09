@@ -3572,7 +3572,7 @@ var app = (function (exports) {
         lightest: 0.65,
         lighter: 0.3,
         light: 0.1,
-        base: 0,
+        default: 0,
         dark: 0.3,
         darker: 0.5,
       },
@@ -3619,17 +3619,17 @@ var app = (function (exports) {
             font: {
               type: 'fixed',
               color: 'white',
-              shade: 'base',
+              shade: 'default',
             },
             background: {
               type: 'custom',
               color: '',
-              shade: 'base',
+              shade: 'default',
             },
             border: {
               type: 'custom',
               color: '',
-              shade: 'base',
+              shade: 'default',
             },
             boxShadows: [
               {
@@ -3647,7 +3647,7 @@ var app = (function (exports) {
             font: {
               type: 'fixed',
               color: 'white',
-              shade: 'base',
+              shade: 'default',
             },
             background: {
               type: 'custom',
@@ -3675,7 +3675,7 @@ var app = (function (exports) {
             font: {
               type: 'fixed',
               color: 'white',
-              shade: 'base',
+              shade: 'default',
             },
             background: {
               type: 'custom',
@@ -3733,17 +3733,17 @@ var app = (function (exports) {
             font: {
               type: 'custom',
               color: '',
-              shade: 'base',
+              shade: 'default',
             },
             background: {
               type: 'fixed',
               color: 'white',
-              shade: 'base',
+              shade: 'default',
             },
             border: {
               type: 'custom',
               color: '',
-              shade: 'base',
+              shade: 'default',
             },
             boxShadows: [
               {
@@ -3761,17 +3761,17 @@ var app = (function (exports) {
             font: {
               type: 'fixed',
               color: 'white',
-              shade: 'base',
+              shade: 'default',
             },
             background: {
               type: 'custom',
               color: '',
-              shade: 'base',
+              shade: 'default',
             },
             border: {
               type: 'custom',
               color: '',
-              shade: 'base',
+              shade: 'default',
             },
             boxShadows: [
               {
@@ -3789,7 +3789,7 @@ var app = (function (exports) {
             font: {
               type: 'fixed',
               color: 'white',
-              shade: 'base',
+              shade: 'default',
             },
             background: {
               type: 'custom',
@@ -3822,7 +3822,7 @@ var app = (function (exports) {
             background: {
               type: 'fixed',
               color: 'white',
-              shade: 'base',
+              shade: 'default',
             },
             border: {
               type: 'fixed',
@@ -3847,7 +3847,7 @@ var app = (function (exports) {
             font: {
               type: 'custom',
               color: '',
-              shade: 'base',
+              shade: 'default',
             },
             background: {
               type: 'transparent',
@@ -3875,7 +3875,7 @@ var app = (function (exports) {
             font: {
               type: 'custom',
               color: '',
-              shade: 'base',
+              shade: 'default',
             },
             background: {
               type: 'fixed',
@@ -3903,7 +3903,7 @@ var app = (function (exports) {
             font: {
               type: 'custom',
               color: '',
-              shade: 'base',
+              shade: 'default',
             },
             background: {
               type: 'fixed',
@@ -3968,14 +3968,8 @@ var app = (function (exports) {
       return color;
     }
 
-    function getColorOpacity(hex, opacity) {
-      let r = '0x' + hex[1] + hex[2];
-      let g = '0x' + hex[3] + hex[4];
-      let b = '0x' + hex[5] + hex[6];
-      return `rgba(${parseInt(r, 16)},${parseInt(g, 16)},${parseInt(
-    b,
-    16
-  )},${opacity})`;
+    function getColorOpacity(color, opacity) {
+      return chroma(color).alpha(opacity);
     }
 
     function getBorderCSS(width, style, color) {
@@ -4530,7 +4524,7 @@ var app = (function (exports) {
     		c: function create() {
     			div = element("div");
     			this.c = noop;
-    			add_location(div, file$2, 33, 0, 1034);
+    			add_location(div, file$2, 33, 0, 1037);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4567,7 +4561,7 @@ var app = (function (exports) {
     	let { radius = "8" } = $$props;
     	let { color = "primary" } = $$props;
     	let { colorcode = "#ff8879" } = $$props;
-    	let { shade = "base" } = $$props;
+    	let { shade = "default" } = $$props;
     	let { opacity = 0 } = $$props;
     	const colorTheme = Object.keys(colorToken.themes);
     	const writable_props = ["width", "height", "radius", "color", "colorcode", "shade", "opacity"];

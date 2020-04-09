@@ -14,7 +14,7 @@ export default {
     lightest: 0.65,
     lighter: 0.3,
     light: 0.1,
-    base: 0,
+    default: 0,
     dark: 0.3,
     darker: 0.5,
   },
