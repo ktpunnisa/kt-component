@@ -1,6 +1,6 @@
 <script>
   import cssVars from "../../svelte-css-vars.js";
-  import colorToken from "../../styles/color.js";
+  import colorToken from "../../style-tokens/color.js";
   import { mixColorShade } from "../../styles/function.js";
   export let width = "100";
   export let height = "40";

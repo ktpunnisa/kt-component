@@ -1,8 +1,8 @@
 <script>
   import chroma from "chroma-js";
   import cssVars from "../../svelte-css-vars.js";
-  import colorToken from "../../styles/color.js";
-  import buttonToken from "../../styles/button.js";
+  import colorToken from "../../style-tokens/color.js";
+  import buttonToken from "../../style-tokens/button.js";
   import {
     mixColorShade,
     getColorOpacity,
