@@ -22,7 +22,6 @@
 <svelte:options tag="kt-component" />
 
 <h1>kt-component</h1>
-<!-- <my-link url="https://www.facebook.com/ktpunnisa">{name}</my-link>s -->
 
 <h2>Color</h2>
 <div class="row">
@@ -147,4 +146,11 @@
   </kt-button>
 </div>
 
+<h2>Link</h2>
+<kt-link color="info" size="small">Click me</kt-link>
+<kt-link color="info" size="medium">Click me</kt-link>
+<kt-link color="info" size="large">Click me</kt-link>
+<kt-link href="https://www.facebook.com/ktpunnisa" type="nav" size="large">
+  Header line
+</kt-link>
 <h2>----------</h2>
