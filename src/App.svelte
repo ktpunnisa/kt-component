@@ -23,7 +23,7 @@
 
 <h1>kt-component</h1>
 
-<h2>Color</h2>
+<!-- <h2>Color</h2>
 <div class="row">
   <kt-palette color="primary" />
   <kt-palette color="secondary" />
@@ -144,7 +144,7 @@
   <kt-button type="ghost" color="info" size="small" disabled="true">
     ghost button
   </kt-button>
-</div>
+</div> -->
 
 <h2>Link</h2>
 <kt-link color="info" size="small">Click me</kt-link>

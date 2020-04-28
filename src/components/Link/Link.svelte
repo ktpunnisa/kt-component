@@ -10,6 +10,7 @@
   export let color = "primary";
   export let href = "";
   export let fontsize = 16;
+  export let fontweight = 600;
   export let colorcode = "#ff8879";
 
   const colorTheme = Object.keys(colorToken.themes);
@@ -39,6 +40,7 @@
   $: styleVars = {
     // size
     fontsize: size != "custom" ? `${linkSize.fontSize}px` : `${fontsize}px`,
+    fontweight: size != "custom" ? linkSize.fontWeight : fontweight,
     colorcode,
 
     // type
@@ -51,17 +53,14 @@
 
     // type:pressed
     fontcolorpressed: getColorShade("pressed", "font", colorcode),
-    textdecorationpressed: linkType["pressed"]["textDecoration"],
-
-    // type:visited
-    fontcolorvisited: getColorShade("visited", "font", colorcode),
-    textdecorationvisited: linkType["visited"]["textDecoration"]
+    textdecorationpressed: linkType["pressed"]["textDecoration"]
   };
 </script>
 
 <style type="text/scss" lang="scss">
-  @mixin link-size($fontsize) {
+  @mixin link-size($fontsize, $fontweight) {
     font-size: $fontsize;
+    font-weight: $fontweight;
   }
 
   @mixin link-state($fontcolor, $textdecoration) {
@@ -70,7 +69,7 @@
   }
 
   a {
-    @include link-size(var(--fontsize));
+    @include link-size(var(--fontsize), var(--fontweight));
     @include link-state(var(--fontcolor), var(--textdecoration));
 
     &:hover {
