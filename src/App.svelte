@@ -2,6 +2,9 @@
   import "./components/Button/button.svelte";
   import "./components/Link/Link.svelte";
   import "./components/Palette/palette.svelte";
+  import "./components/Input/Input.svelte";
+
+  let value = "test";
 </script>
 
 <style type="text/scss" lang="scss">
@@ -14,7 +17,8 @@
     align-items: center;
   }
 
-  kt-button {
+  kt-button,
+  kt-input {
     margin: 4px;
   }
 </style>
@@ -23,7 +27,7 @@
 
 <h1>kt-component</h1>
 
-<!-- <h2>Color</h2>
+<h2>Color</h2>
 <div class="row">
   <kt-palette color="primary" />
   <kt-palette color="secondary" />
@@ -144,7 +148,7 @@
   <kt-button type="ghost" color="info" size="small" disabled="true">
     ghost button
   </kt-button>
-</div> -->
+</div>
 
 <h2>Link</h2>
 <kt-link color="info" size="small">Click me</kt-link>
@@ -153,4 +157,11 @@
 <kt-link href="https://www.facebook.com/ktpunnisa" type="nav" size="large">
   Header line
 </kt-link>
+
+<h2>Input</h2>
+<div class="row">
+  <kt-input label="name" placeholder="name" {value} />
+  <kt-input label="name" placeholder="name" disabled="true" />
+  <kt-input label="name" placeholder="name" {value} error="true" />
+</div>
 <h2>----------</h2>

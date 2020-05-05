@@ -19,8 +19,6 @@
   $: linkSize = linkToken.sizes[size];
   $: linkType = linkToken.types[type];
 
-  $: console.log(linkSize);
-
   function getBaseColor(state, style, colorcode) {
     return linkType[state][style].type === "fixed"
       ? colorToken.themes[linkType[state][style].color]
