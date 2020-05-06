@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 0 auto;
   }
 
   kt-button,
@@ -41,7 +42,7 @@
   <kt-palette color="white" />
   <kt-palette color="gray" />
   <kt-palette color="black" />
-  <kt-palette color="#8E44AD" shade="dark" opacity="0.2" />
+  <!-- <kt-palette color="#8E44AD" shade="dark" opacity="0.2" /> -->
 </div>
 
 <h2>Color shade</h2>
@@ -113,7 +114,7 @@
 <div class="row">
   <kt-button>default button</kt-button>
   <kt-button disabled="true">disabled button</kt-button>
-  <kt-button
+  <!-- <kt-button
     size="custom"
     fontsize="20"
     radius="20"
@@ -123,7 +124,7 @@
     pl="24"
     color="#8E44AD">
     custom button
-  </kt-button>
+  </kt-button> -->
 </div>
 
 <div class="row">
@@ -165,3 +166,4 @@
   <kt-input label="name" placeholder="name" {value} error="true" />
 </div>
 <h2>----------</h2>
+<!-- {value} -->

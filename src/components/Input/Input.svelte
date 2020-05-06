@@ -6,6 +6,16 @@
   import { mixColorShade, getBorderCSS } from "../../styles/function.js";
   import { current_component } from "svelte/internal";
   import { getEventsAction } from "../../utils/utils.js";
+  import { createEventDispatcher } from "svelte";
+  import { get_current_component } from "svelte/internal";
+
+  const component = get_current_component();
+  const svelteDispatch = createEventDispatcher();
+  const dispatch = (label, value) => {
+    svelteDispatch(value);
+    component.dispatchEvent &&
+      component.dispatchEvent(new CustomEvent(label, { value }));
+  };
 
   export let size = "medium";
   export let type = "default";
@@ -128,6 +138,7 @@
   .label {
     @include label-shape(var(--labelmarginbottom));
     @include label-size(var(--labelfontsize), var(--labelfontweight));
+    text-align: start;
   }
 
   .label-normal {
@@ -213,4 +224,3 @@
   bind:value
   {disabled}
   {placeholder} />
-{value}
