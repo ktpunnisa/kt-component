@@ -25,6 +25,7 @@
   const colorTheme = Object.keys(colorToken.themes);
   $: colorcode = colorTheme.includes(color) ? colorToken.themes[color] : color;
 
+  $: console.log(type, buttonToken.types[type]);
   $: btnShape = buttonToken.shape;
   $: btnSize = buttonToken.sizes[size];
   $: btnType = buttonToken.types[type];
@@ -75,6 +76,9 @@
   }
 
   $: styleVars = {
+    type,
+    size,
+    color,
     // shape
     radius: size != "custom" ? `${btnShape.borderRadius}px` : `${radius}px`,
 

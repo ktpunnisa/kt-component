@@ -134,9 +134,9 @@
 </div>
 
 <div class="row">
-  <kt-button type="default" color="info">default button</kt-button>
-  <kt-button type="outline" color="info">outline button</kt-button>
-  <kt-button type="ghost" color="info">ghost button</kt-button>
+  <kt-button type="default">default button</kt-button>
+  <kt-button type="outline">outline button</kt-button>
+  <kt-button type="ghost">ghost button</kt-button>
 </div>
 
 <div class="row">
@@ -166,4 +166,3 @@
   <kt-input label="name" placeholder="name" {value} error="true" />
 </div>
 <h2>----------</h2>
-<!-- {value} -->
