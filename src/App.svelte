@@ -22,6 +22,10 @@
   kt-input {
     margin: 4px;
   }
+
+  .input-display {
+    width: 50%;
+  }
 </style>
 
 <svelte:options tag="kt-component" />
@@ -160,9 +164,22 @@
 </kt-link>
 
 <h2>Input</h2>
+
+<div class="input-display">
+  <kt-input label="name" placeholder="name" {value} />
+  <kt-input label="name" placeholder="name" disabled="true" />
+  <kt-input label="name" placeholder="name" {value} error="true" />
+</div>
 <div class="row">
   <kt-input label="name" placeholder="name" {value} />
   <kt-input label="name" placeholder="name" disabled="true" />
   <kt-input label="name" placeholder="name" {value} error="true" />
 </div>
+
+<div class="row">
+  <kt-input label="name" placeholder="name" size="small" />
+  <kt-input label="name" placeholder="name" size="medium" />
+  <kt-input label="name" placeholder="name" size="large" />
+</div>
+
 <h2>----------</h2>

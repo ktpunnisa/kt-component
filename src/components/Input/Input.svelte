@@ -113,6 +113,8 @@
 
   @mixin input-shape($radius) {
     border-radius: $radius;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   @mixin label-size($fontsize, $fontweight) {
@@ -138,7 +140,6 @@
   .label {
     @include label-shape(var(--labelmarginbottom));
     @include label-size(var(--labelfontsize), var(--labelfontweight));
-    text-align: start;
   }
 
   .label-normal {
@@ -205,22 +206,24 @@
 
 <svelte:options tag="kt-input" />
 
-{#if disabled}
-  <div class="label-disabled" use:cssVars={styleVars}>{label}</div>
-{:else if error}
-  <div class="label-error" use:cssVars={styleVars}>{label}</div>
-{:else if isFocused}
-  <div class="label-focus" use:cssVars={styleVars}>{label}</div>
-{:else}
-  <div class="label-normal" use:cssVars={styleVars}>{label}</div>
-{/if}
+<div>
+  {#if disabled}
+    <div class="label-disabled" use:cssVars={styleVars}>{label}</div>
+  {:else if error}
+    <div class="label-error" use:cssVars={styleVars}>{label}</div>
+  {:else if isFocused}
+    <div class="label-focus" use:cssVars={styleVars}>{label}</div>
+  {:else}
+    <div class="label-normal" use:cssVars={styleVars}>{label}</div>
+  {/if}
 
-<input
-  class:input-normal={!error}
-  class:input-error={error}
-  use:cssVars={styleVars}
-  on:focus={onFocus}
-  on:blur={onBlur}
-  bind:value
-  {disabled}
-  {placeholder} />
+  <input
+    class:input-normal={!error}
+    class:input-error={error}
+    use:cssVars={styleVars}
+    on:focus={onFocus}
+    on:blur={onBlur}
+    bind:value
+    {disabled}
+    {placeholder} />
+</div>
