@@ -5,16 +5,15 @@
   import inputToken from "../../style-tokens/input.js";
   import { mixColorShade, getBorderCSS } from "../../styles/function.js";
   import { current_component } from "svelte/internal";
-  import { getEventsAction } from "../../utils/utils.js";
   import { createEventDispatcher } from "svelte";
   import { get_current_component } from "svelte/internal";
 
   const component = get_current_component();
   const svelteDispatch = createEventDispatcher();
-  const dispatch = (label, value) => {
+  const dispatch = (type, event) => {
     svelteDispatch(value);
     component.dispatchEvent &&
-      component.dispatchEvent(new CustomEvent(label, { value }));
+      component.dispatchEvent(new CustomEvent(type, event));
   };
 
   export let size = "medium";
@@ -29,6 +28,14 @@
 
   const onFocus = () => (isFocused = true);
   const onBlur = () => (isFocused = false);
+  const changeValue = () => {
+    dispatch("value", {
+      detail: { value },
+      bubbles: true,
+      cancelable: true,
+      composed: true
+    });
+  };
 
   $: labelShape = inputToken.shape.label;
   $: inputShape = inputToken.shape.input;
@@ -223,6 +230,7 @@
     use:cssVars={styleVars}
     on:focus={onFocus}
     on:blur={onBlur}
+    on:change={changeValue}
     bind:value
     {disabled}
     {placeholder} />

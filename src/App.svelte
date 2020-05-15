@@ -5,6 +5,10 @@
   import "./components/Input/Input.svelte";
 
   let value = "test";
+
+  function handleValue(event) {
+    value = event.detail.value;
+  }
 </script>
 
 <style type="text/scss" lang="scss">
@@ -166,14 +170,28 @@
 <h2>Input</h2>
 
 <div class="input-display">
-  <kt-input label="name" placeholder="name" {value} />
+  <kt-input label="name" placeholder="name" {value} on:value={handleValue} />
   <kt-input label="name" placeholder="name" disabled="true" />
-  <kt-input label="name" placeholder="name" {value} error="true" />
+  <kt-input
+    label="name"
+    placeholder="name"
+    {value}
+    error="true"
+    on:value={handleValue} />
 </div>
 <div class="row">
-  <kt-input label="name" placeholder="name" {value} />
-  <kt-input label="name" placeholder="name" disabled="true" />
-  <kt-input label="name" placeholder="name" {value} error="true" />
+  <kt-input label="name" placeholder="name" {value} on:value={handleValue} />
+  <kt-input
+    label="name"
+    placeholder="name"
+    disabled="true"
+    on:value={handleValue} />
+  <kt-input
+    label="name"
+    placeholder="name"
+    {value}
+    error="true"
+    on:value={handleValue} />
 </div>
 
 <div class="row">
@@ -181,5 +199,5 @@
   <kt-input label="name" placeholder="name" size="medium" />
   <kt-input label="name" placeholder="name" size="large" />
 </div>
-
+{value}
 <h2>----------</h2>
