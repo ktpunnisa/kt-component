@@ -170,28 +170,28 @@
 <h2>Input</h2>
 
 <div class="input-display">
-  <kt-input label="name" placeholder="name" {value} on:value={handleValue} />
+  <kt-input label="name" placeholder="name" {value} on:change={handleValue} />
   <kt-input label="name" placeholder="name" disabled="true" />
   <kt-input
     label="name"
     placeholder="name"
     {value}
     error="true"
-    on:value={handleValue} />
+    on:change={handleValue} />
 </div>
 <div class="row">
-  <kt-input label="name" placeholder="name" {value} on:value={handleValue} />
+  <kt-input label="name" placeholder="name" {value} on:change={handleValue} />
   <kt-input
     label="name"
     placeholder="name"
     disabled="true"
-    on:value={handleValue} />
+    on:change={handleValue} />
   <kt-input
     label="name"
     placeholder="name"
     {value}
     error="true"
-    on:value={handleValue} />
+    on:change={handleValue} />
 </div>
 
 <div class="row">

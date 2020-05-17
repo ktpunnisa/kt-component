@@ -29,7 +29,7 @@
   const onFocus = () => (isFocused = true);
   const onBlur = () => (isFocused = false);
   const changeValue = () => {
-    dispatch("value", {
+    dispatch("change", {
       detail: { value },
       bubbles: true,
       cancelable: true,
