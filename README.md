@@ -2,7 +2,7 @@
 
 # kt-component
 
-This is a web components ui libraries for Ktui: Design System Customizing Tools 
+This is a web components ui library for Ktui: Design System Customizing Tools 
 
 ## Get started
 
